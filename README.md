@@ -1,8 +1,8 @@
 # roslibusiness
 
-hi im new in this. i have basic java but thats two years ago. i have no knowledge on android development and now im learning step by step
+hi im new in this. i have basic java but thats two years ago. i have no knowledge on android development and now im learning step by step.
 
-so basically this is a project for my fyp. i intend to create a inventory app for a small business that has these specifications:-
+so basically this is a project for my fyp. i intend to create an inventory app for a small business that has these specifications:-
 
 1) inventory section that can generate and download barcode when adding new item, then user can scan the code when they want to add or delete quantity
 2) sales section that can add new input (sales) based on date and will calculate the total number of sales for every month
