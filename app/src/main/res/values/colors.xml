@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#AD5341</color>
+    <color name="colorPrimaryDark">#FABDA6</color>
+    <color name="colorAccent">#f39c72</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="latar">#FABDA6</color>
+    <color name="grey">#8B8A8A</color>
+    <color name="dark">#F2765E</color>
+    <color name="brownpinkish">#ae9f99</color>
+    <color name="lghtgrey">#998B8A8A</color>
+
+
+</resources>

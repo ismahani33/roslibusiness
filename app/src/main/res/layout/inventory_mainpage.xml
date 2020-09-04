@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar">
+
+    <TextView
+        android:id="@+id/senaraiBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/senarai_barang"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bahagian_paparan"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senaraiBarang">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_background_tab"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:id="@+id/all_inventoryTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/icon_background_tab"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:id="@+id/dagingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/daging"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/icon_background_tab"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:id="@+id/sayuranTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sayuran"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/icon_background_tab"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:id="@+id/rempahTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rempah"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/icon_background_tab"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:id="@+id/perkakasTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perkakas"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/icon_background_tab"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:id="@+id/lainlainTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lain_lain"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

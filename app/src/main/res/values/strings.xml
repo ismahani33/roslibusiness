@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">roslibusiness</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="perusahaan_rosli">Perusahaan Rosli</string>
+    <string name="stok">Stok</string>
+    <string name="hasil">Hasil</string>
+    <string name="daging">Daging</string>
+    <string name="sayuran">Sayuran</string>
+    <string name="senarai_barang">Senarai Barang</string>
+    <string name="rempah">Rempah</string>
+    <string name="bahan_kering">Bahan Kering</string>
+    <string name="perkakas">Perkakas</string>
+
+    <string name="belanja">Belanja</string>
+    <string name="all">All</string>
+    <string name="lain_lain">Lain-lain</string>
+
+</resources>
