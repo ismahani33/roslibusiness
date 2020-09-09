@@ -10,28 +10,83 @@
         android:id="@+id/senaraiBarang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="@string/senarai_barang"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="vertical"
-        android:background="@drawable/bahagian_paparan"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/senaraiBarang">
+
+        <Button
+            android:id="@+id/bahanKering"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="@string/bahan_kering"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/sayuran"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/custom_button"
+            android:layout_gravity="fill"
+            android:text="@string/sayuran"
+            android:layout_weight="1"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/daging"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+
+            android:background="@drawable/custom_button"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:text="@string/daging" />
+
+        <Button
+            android:id="@+id/rempah"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+
+            android:background="@drawable/custom_button"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:text="@string/rempah" />
+
+        <Button
+            android:id="@+id/lainlain"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+
+            android:background="@drawable/custom_button"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:text="@string/lain_lain" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -49,6 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="12dp"
+            android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/barcode_vector"
             />
 
@@ -56,6 +112,7 @@
             android:id="@+id/btnAddInventory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tambah_vector"
             />
 

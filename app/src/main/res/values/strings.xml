@@ -9,11 +9,32 @@
     <string name="sayuran">Sayuran</string>
     <string name="senarai_barang">Senarai Barang</string>
     <string name="rempah">Rempah</string>
-    <string name="bahan_kering">Bahan Kering</string>
+    <string name="bahan_kering">Keringan</string>
     <string name="perkakas">Perkakas</string>
 
     <string name="belanja">Belanja</string>
     <string name="all">All</string>
     <string name="lain_lain">Lain-lain</string>
+    <string name="desc">desc</string>
+    <string name="nama">Nama</string>
+    <string name="Kategori">Kategori</string>
+    <string name="Nama">Nama</string>
+    <string name="Harga">Harga</string>
+    <string name="harga">Harga</string>
+    <string name="Tambah">Tambah</string>
+    <string name="Batal">Batal</string>
+    <string name="ID">ID</string>
+    <string name="Maklumat_Barang">Maklumat Barang</string>
+    <string name="Gambar">Gambar</string>
+
+    <string-array name="kategori">
+        <item>Sila Pilih Kategori</item>
+        <item>Daging</item>
+        <item>Sayuran</item>
+        <item>Rempah</item>
+        <item>Bahan Kering</item>
+        <item>Lain-lain</item>
+    </string-array>
+
 
 </resources>
