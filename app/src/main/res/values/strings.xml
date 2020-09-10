@@ -26,6 +26,7 @@
     <string name="ID">ID</string>
     <string name="Maklumat_Barang">Maklumat Barang</string>
     <string name="Gambar">Gambar</string>
+    <string name="Paparan_Hasil">Paparan Hasil</string>
 
     <string-array name="kategori">
         <item>Sila Pilih Kategori</item>
