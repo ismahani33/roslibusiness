@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sales_mainpage"/>
+        <activity android:name=".inventory_barcode"></activity>
+        <activity android:name=".expenses_mainpage" />
+        <activity android:name=".sales_mainpage" />
         <activity android:name=".inventory_details" />
         <activity android:name=".inventory_additem" />
-        <activity android:name=".inventoryMainpage" />
+        <activity
+            android:name=".inventory_mainpage"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
