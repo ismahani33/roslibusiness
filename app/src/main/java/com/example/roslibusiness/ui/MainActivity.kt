@@ -1,10 +1,13 @@
-package com.example.roslibusiness
+package com.example.roslibusiness.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.roslibusiness.R
+import com.example.roslibusiness.ui.expenses.expenses_mainpage
+import com.example.roslibusiness.ui.inventory.inventory_mainpage
+import com.example.roslibusiness.ui.sales.sales_mainpage
 
 class MainActivity : AppCompatActivity() {
 

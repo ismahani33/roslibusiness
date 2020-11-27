@@ -1,9 +1,9 @@
-package com.example.roslibusiness
+package com.example.roslibusiness.ui.inventory
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
+import com.example.roslibusiness.R
 import kotlinx.android.synthetic.main.inventory_mainpage.*
 
 class inventory_mainpage : AppCompatActivity() {
@@ -14,6 +14,11 @@ class inventory_mainpage : AppCompatActivity() {
 
         btnAddInventory.setOnClickListener {
             val intent1 = Intent(this, inventory_additem::class.java)
+            startActivity(intent1)
+        }
+
+        btnScanBarcode.setOnClickListener {
+            val intent1 = Intent(this, inventory_barcode_page::class.java)
             startActivity(intent1)
         }
 

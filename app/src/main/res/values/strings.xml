@@ -28,6 +28,12 @@
     <string name="Gambar">Gambar</string>
     <string name="Paparan_Hasil">Paparan Hasil</string>
     <string name="PaparanBelanja">Paparan Belanja</string>
+    <string name="Buang">buang</string>
+    <string name="barcode">Sila Tekan Butang Untuk Imbas Kod Bar</string>
+    <string name="Amaun">Amaun</string>
+    <string name="tarikh">Tarikh</string>
+    <string name="buang">Buang</string>
+    <string name="muatTurun">Muat Turun Kod</string>
 
     <string-array name="kategori">
         <item>Sila Pilih Kategori</item>

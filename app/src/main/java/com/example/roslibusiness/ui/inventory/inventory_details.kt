@@ -1,7 +1,8 @@
-package com.example.roslibusiness
+package com.example.roslibusiness.ui.inventory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.roslibusiness.R
 
 class inventory_details : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

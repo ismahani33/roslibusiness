@@ -1,10 +1,9 @@
-package com.example.roslibusiness
+package com.example.roslibusiness.ui.inventory
 
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
@@ -12,15 +11,11 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.Nullable
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.google.zxing.BarcodeFormat
-import com.google.zxing.oned.Code128Writer
+import com.example.roslibusiness.R
 import kotlinx.android.synthetic.main.inventory_additem.*
-import kotlinx.android.synthetic.main.inventory_details.*
 
 class inventory_additem : AppCompatActivity() {
 
@@ -33,13 +28,7 @@ class inventory_additem : AppCompatActivity() {
         setContentView(R.layout.inventory_additem)
 
         val text_barang = findViewById<EditText>(R.id.inputNamaBarang)
-//        val text_harga = findViewById<EditText>(R.id.inputHarga)
-
-        //button close
-        btnClose.setOnClickListener {
-            val intent = Intent(this, inventory_mainpage::class.java)
-            startActivity(intent)
-        }
+        val text_harga = findViewById<EditText>(R.id.inputHarga)
 
         //camera gallery
         imageInventory.setOnClickListener {
@@ -95,6 +84,15 @@ class inventory_additem : AppCompatActivity() {
 //                Toast.makeText(this, "Sila masukkan nama barang", Toast.LENGTH_SHORT).show()
 //            }
 //        }
+
+        //butang tambah (add database, generate barcode)
+        btnTambah.setOnClickListener {
+            val intent1 = Intent(this, inventory_details::class.java)
+            startActivity(intent1)
+
+
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -110,62 +108,5 @@ class inventory_additem : AppCompatActivity() {
         }
     }
 
-    //start barcode
 
-//    @RequiresApi(Build.VERSION_CODES.M)
-//    private fun displayBitmap(value: String) {
-//        val widthPixels = resources.getDimensionPixelSize(R.dimen.width_barcode)
-//        val heightPixels = resources.getDimensionPixelSize(R.dimen.height_barcode)
-//
-//        image_barcode.setImageBitmap(
-//            createBarcodeBitmap(
-//                barcodeValue = value,
-//                barcodeColor = getColor(R.color.colorPrimary),
-//                backgroundColor = getColor(android.R.color.white),
-//                widthPixels = widthPixels,
-//                heightPixels = heightPixels
-//            )
-//        )
-//        textNama.text = value
-//    }
-//
-//    private fun createBarcodeBitmap(
-//        barcodeValue: String,
-//        barcodeColor: Int,
-//        backgroundColor: Int,
-//        widthPixels: Int,
-//        heightPixels: Int
-//    ): Bitmap {
-//        val bitMatrix = Code128Writer().encode(
-//            barcodeValue,
-//            BarcodeFormat.CODE_128,
-//            widthPixels,
-//            heightPixels
-//        )
-//
-//        val pixels = IntArray(bitMatrix.width * bitMatrix.height)
-//        for (y in 0 until bitMatrix.height) {
-//            val offset = y * bitMatrix.width
-//            for (x in 0 until bitMatrix.width) {
-//                pixels[offset + x] =
-//                    if (bitMatrix.get(x, y)) barcodeColor else backgroundColor
-//            }
-//        }
-//
-//        val bitmap = Bitmap.createBitmap(
-//            bitMatrix.width,
-//            bitMatrix.height,
-//            Bitmap.Config.ARGB_8888
-//        )
-//        bitmap.setPixels(
-//            pixels,
-//            0,
-//            bitMatrix.width,
-//            0,
-//            0,
-//            bitMatrix.width,
-//            bitMatrix.height
-//        )
-//        return bitmap
-//    }
 }

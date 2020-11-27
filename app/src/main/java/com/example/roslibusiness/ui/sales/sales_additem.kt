@@ -1,11 +1,13 @@
-package com.example.roslibusiness
+package com.example.roslibusiness.ui.sales
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.roslibusiness.R
 
-class inventory_barcode : AppCompatActivity() {
+class sales_additem : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.inventory_barcode)
+
+        setContentView(R.layout.sales_additem)
     }
 }
