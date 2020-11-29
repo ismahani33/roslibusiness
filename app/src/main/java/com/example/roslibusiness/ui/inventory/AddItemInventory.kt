@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import android.widget.AdapterView
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
@@ -17,18 +16,14 @@ import androidx.core.content.ContextCompat
 import com.example.roslibusiness.R
 import kotlinx.android.synthetic.main.inventory_additem.*
 
-class inventory_additem : AppCompatActivity() {
+class AddItemInventory : AppCompatActivity() {
 
     private val REQUEST_IMAGE_GALLERY = 132
     private val REQUEST_IMAGE_CAMERA = 142
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.inventory_additem)
-
-        val text_barang = findViewById<EditText>(R.id.inputNamaBarang)
-        val text_harga = findViewById<EditText>(R.id.inputHarga)
 
         //camera gallery
         imageInventory.setOnClickListener {
@@ -43,7 +38,7 @@ class inventory_additem : AppCompatActivity() {
             }
             builder.setNegativeButton("Kamera") { dialog, which ->
                 dialog.dismiss()
-                Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {takePictureIntent ->
+                Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
                     takePictureIntent.resolveActivity(packageManager)?.also {
                         val permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
                         if (permission != PackageManager.PERMISSION_GRANTED){
@@ -57,7 +52,7 @@ class inventory_additem : AppCompatActivity() {
                 }
 
             }
-            val dialog :AlertDialog = builder.create()
+            val dialog : AlertDialog = builder.create()
             dialog.show()
         }
 
@@ -86,8 +81,8 @@ class inventory_additem : AppCompatActivity() {
 //        }
 
         //butang tambah (add database, generate barcode)
-        btnTambah.setOnClickListener {
-            val intent1 = Intent(this, inventory_details::class.java)
+        btnTambahItem.setOnClickListener {
+            val intent1 = Intent(this, inventoryDetailsActivity::class.java)
             startActivity(intent1)
 
 
@@ -107,6 +102,5 @@ class inventory_additem : AppCompatActivity() {
             Toast.makeText(this, "Sedikit masalah berlaku", Toast.LENGTH_SHORT).show()
         }
     }
-
 
 }

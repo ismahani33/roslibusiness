@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.roslibusiness.R
 
-class inventory_details : AppCompatActivity() {
+class barcodePageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.inventory_details)
+        setContentView(R.layout.inventory_barcode_page)
     }
 }

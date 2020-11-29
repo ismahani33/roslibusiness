@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import com.example.roslibusiness.R
 import com.example.roslibusiness.ui.expenses.expenses_mainpage
-import com.example.roslibusiness.ui.inventory.inventory_mainpage
+import com.example.roslibusiness.ui.inventory.inventoryMainpageActivity
 import com.example.roslibusiness.ui.sales.sales_mainpage
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val buttonExpenses = findViewById<ImageView>(R.id.imageBelanja)
 
         buttonInventory .setOnClickListener {
-            val intent1 = Intent(this, inventory_mainpage::class.java)
+            val intent1 = Intent(this, inventoryMainpageActivity::class.java)
 
             startActivity(intent1)
         }

@@ -7,7 +7,6 @@ import com.example.roslibusiness.R
 class sales_additem : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.sales_additem)
     }
 }

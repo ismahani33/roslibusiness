@@ -34,6 +34,7 @@
     <string name="tarikh">Tarikh</string>
     <string name="buang">Buang</string>
     <string name="muatTurun">Muat Turun Kod</string>
+    <string name="Imbas">Imbas</string>
 
     <string-array name="kategori">
         <item>Sila Pilih Kategori</item>
