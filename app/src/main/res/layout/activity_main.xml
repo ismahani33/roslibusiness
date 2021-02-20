@@ -4,153 +4,287 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/latar"
+    android:background="@drawable/bg"
     tools:context=".ui.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
+        android:id="@+id/welcomeTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/latar"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/perusahaan_rosli"
-        android:layout_width="172dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/perusahaan_rosli"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <GridLayout
+        android:id="@+id/firstGrid"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:background="@drawable/bahagian_paparan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintCircleRadius="20dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:layout_marginTop="20dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:columnOrderPreserved="false"
+        android:padding="8dp"
+        android:rowCount="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTxt">
 
-        <LinearLayout
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:padding="15dp"
-            android:layout_width="0dp"
+        <!-- Row 1 -->
+
+        <!-- Column 1 -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/stokCard"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:baselineAligned="false">
-            
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:padding="8dp"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
-                    android:background="@drawable/icon_background">
-
-                    <ImageView
-                        android:id="@+id/imageStok"
-                        android:layout_width="90dp"
-                        android:layout_height="75dp"
-                        android:layout_marginTop="8dp"
-                        android:src="@drawable/stok" />
-
-                        <TextView
-                            android:id="@+id/stok"
-                            android:layout_width="56dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="17dp"
-                            android:text="@string/stok"
-                            android:textAlignment="center"
-                            android:textSize="20sp" />
-
-                </LinearLayout>
-            </LinearLayout>
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            >
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:padding="8dp"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
-                    android:background="@drawable/icon_background">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="69dp"
+                    android:backgroundTint="@color/light_grey"
+                    android:src="@drawable/stok" />
 
-                    <ImageView
-                        android:id="@+id/imageHasil"
-                        android:layout_width="90dp"
-                        android:layout_height="75dp"
-                        android:layout_marginTop="8dp"
-                        android:src="@drawable/hasil" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Stok"
+                    android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/hasil"
-                        android:layout_width="56dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:text="@string/hasil"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
             </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Column 2 -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/hasilCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:padding="8dp"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
-                    android:background="@drawable/icon_background">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="69dp"
+                    android:backgroundTint="@color/light_grey"
+                    android:src="@drawable/hasil" />
 
-                    <ImageView
-                        android:id="@+id/imageBelanja"
-                        android:layout_width="90dp"
-                        android:layout_height="75dp"
-                        android:layout_marginTop="8dp"
-                        android:src="@drawable/belanja" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Hasil"
+                    android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/belanja"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:text="@string/belanja"
-                        android:textAlignment="center"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-    </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Column 3 -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/belanjaCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/light_grey"
+                    android:src="@drawable/belanja" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Belanja"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/secondGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="14dp"
+        android:rowCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstGrid">
+
+        <!-- Row 1 -->
+
+        <!-- Column 1 -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/lowStockCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barang Kurang"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lowStockRecycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Column 2 -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/totalProductCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jumlah_barang"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/jumlahBarangTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/xx" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/amaun_hasil"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hasilAmaunTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="XX" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Amaun Belanja"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/belanjaAmaunTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="XX" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </GridLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/barcodeBtnMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_barcode"
+        android:backgroundTint="@color/pink_251"
+        android:text="@string/barcode_scan"
+        app:icon="@drawable/ic_barcode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondGrid">
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

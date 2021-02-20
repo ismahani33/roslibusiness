@@ -1,15 +1,12 @@
-package com.example.roslibusiness.ui.expenses
+package com.example.roslibusiness.ui.sales
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.roslibusiness.R
 
-class expenses_additem : AppCompatActivity() {
+class SalesEditorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.expenses_additem)
-
-
+        setContentView(R.layout.activity_sales_additem)
     }
 }

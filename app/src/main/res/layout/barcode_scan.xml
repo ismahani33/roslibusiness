@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.inventory.barcodeTambahActivity">
+    tools:context=".ui.inventory.BarcodeActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

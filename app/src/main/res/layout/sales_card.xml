@@ -1,50 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="5dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/salesCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/salesImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sales_in" />
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        card_view:cardCornerRadius="2dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="20dp"
-            android:layout_toEndOf="@id/salesImageView"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <TextView
-                style="@style/reportContentText"
-                android:text="Tunai"
-                android:textColor="@color/grey" />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/hasilRV"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/ic_money_24"
+                    card_view:backgroundTint="@color/brown_243"/>
 
-            <TextView
-                style="@style/viewParent.headerText"
-                android:text="RM1000.22"
-                android:textSize="21sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tarikhHasilRV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Tarikh"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RM"
+                        android:textSize="32sp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/hargaHasilRV"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="32sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
 
         </LinearLayout>
 
+    </com.google.android.material.card.MaterialCardView>
 
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

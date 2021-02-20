@@ -35,6 +35,21 @@
     <string name="buang">Buang</string>
     <string name="muatTurun">Muat Turun Kod</string>
     <string name="Imbas">Imbas</string>
+    <string name="amaun">Amaun</string>
+    <string name="batal">Batal</string>
+    <string name="tambah_belanja">Tambah Belanja</string>
+    <string name="senarai_belanja">Senarai Belanja</string>
+    <string name="button_for_expenses">button for expenses</string>
+    <string name="tambah_stok">Tambah Stok</string>
+    <string name="kategori">Kategori</string>
+    <string name="kod_bar_id">Kod Bar ID</string>
+    <string name="muat_turun_kod_bar">Muat Turun Kod Bar</string>
+    <string name="tambah">Tambah</string>
+    <string name="welcome">Perusahaan Rosli</string>
+    <string name="barcode_scan">Tekan Untuk Imbas Kod Bar</string>
+    <string name="jumlah_barang">Jumlah Barang</string>
+    <string name="xx">XX</string>
+    <string name="amaun_hasil">Amaun Hasil</string>
 
     <string-array name="kategori">
         <item>Sila Pilih Kategori</item>

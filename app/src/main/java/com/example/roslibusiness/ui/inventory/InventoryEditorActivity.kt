@@ -1,5 +1,6 @@
 package com.example.roslibusiness.ui.inventory
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -14,19 +15,19 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.roslibusiness.R
-import kotlinx.android.synthetic.main.inventory_additem.*
+import kotlinx.android.synthetic.main.activity_inventory_additem.*
 
-class AddItemInventory : AppCompatActivity() {
+class InventoryEditorActivity : AppCompatActivity() {
 
     private val REQUEST_IMAGE_GALLERY = 132
     private val REQUEST_IMAGE_CAMERA = 142
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.inventory_additem)
+        setContentView(R.layout.activity_inventory_additem)
 
         //camera gallery
-        imageInventory.setOnClickListener {
+        stokImageView.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Pilih Gambar")
             builder.setMessage("Sila pilih sumber gambar")
@@ -40,10 +41,11 @@ class AddItemInventory : AppCompatActivity() {
                 dialog.dismiss()
                 Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
                     takePictureIntent.resolveActivity(packageManager)?.also {
-                        val permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
+                        val permission = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                         if (permission != PackageManager.PERMISSION_GRANTED){
-                            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA,
-                                android.Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
+                            ActivityCompat.requestPermissions(this, arrayOf(
+                                Manifest.permission.CAMERA,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
                         }
                         else{
                             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAMERA)
@@ -59,14 +61,7 @@ class AddItemInventory : AppCompatActivity() {
 
 
         //dropdown for inventory category
-        spinKategori.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
-            }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-            }
-        }
 
         //button plus
 //        btnTambah.setOnClickListener {
@@ -81,22 +76,18 @@ class AddItemInventory : AppCompatActivity() {
 //        }
 
         //butang tambah (add database, generate barcode)
-        btnTambahItem.setOnClickListener {
-            val intent1 = Intent(this, inventoryDetailsActivity::class.java)
-            startActivity(intent1)
 
 
-        }
 
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_IMAGE_GALLERY && resultCode == Activity.RESULT_OK && data != null){
-            imageInventory.setImageURI(data.data)
+        if (requestCode == REQUEST_IMAGE_GALLERY && resultCode == RESULT_OK && data != null){
+            stokImageView.setImageURI(data.data)
         }
-        else if (requestCode == REQUEST_IMAGE_CAMERA && resultCode == Activity.RESULT_OK && data != null){
-            imageInventory.setImageBitmap(data.extras?.get("data") as Bitmap)
+        else if (requestCode == REQUEST_IMAGE_CAMERA && resultCode == RESULT_OK && data != null){
+            stokImageView.setImageBitmap(data.extras?.get("data") as Bitmap)
         }
         else{
             Toast.makeText(this, "Sedikit masalah berlaku", Toast.LENGTH_SHORT).show()

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.inventory.InventoryEditorActivity"
+    android:background="@color/pink_251">
+
+    <TextView
+        android:id="@+id/tambahInventoryTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/tambah_stok"
+        android:textSize="25sp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/stokImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_add_photo_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tambahInventoryTxt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namaInputTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/nama"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@+id/stokImageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/namaEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/kategoriInputTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/kategori"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@+id/namaInputTxt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kategoriEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/hargaInputTxt">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/barcodeInputTxt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:hint="@string/kod_bar_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/barcodeEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/barcodeBtnInventory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_barcode"
+            app:backgroundTint="@color/black" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hargaInputTxt"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/harga"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kategoriInputTxt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hargaEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/barcodeImageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/downloadBarcodeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:backgroundTint="@color/pink_251"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/muat_turun_kod_bar"
+        android:textColor="@color/dark_grey"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/barcodeImageView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tambahInventoryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="20dp"
+        app:cornerRadius="16dp"
+        android:text="@string/tambah"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintTop_toBottomOf="@+id/downloadBarcodeBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
