@@ -11,7 +11,7 @@ class sales_mainpage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sales_mainpage)
 
-        btnAddSales.setOnClickListener(){
+        btnAddSales.setOnClickListener{
             val intent = Intent(this, sales_additem::class.java)
             startActivity(intent)
         }
