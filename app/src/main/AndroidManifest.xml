@@ -27,11 +27,9 @@
         <activity android:name=".ui.inventory.InventoryEditorActivity"/>
         <activity android:name=".ui.sales.SalesEditorActivity" />
         <activity android:name=".ui.expenses.ExpensesEditorActivity" />
-        <activity android:name=".ui.inventory.barcodePageActivity" />
         <activity android:name=".ui.inventory.BarcodeActivity" />
         <activity android:name=".ui.expenses.ExpensesMainpageActivity" />
         <activity android:name=".ui.sales.SalesMainpageActivity" />
-        <activity android:name=".ui.inventory.inventoryDetailsActivity" />
         <activity
             android:name=".ui.inventory.InventoryMainpageActivity"
             android:parentActivityName=".ui.MainActivity" />

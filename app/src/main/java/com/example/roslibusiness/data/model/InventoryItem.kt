@@ -8,3 +8,4 @@ data class InventoryItem(
     val stock_quantity: String,
     val total_stock: String
 )
+
